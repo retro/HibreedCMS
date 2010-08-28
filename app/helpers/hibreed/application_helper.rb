@@ -1,0 +1,2 @@
+module Hibreed::ApplicationHelper
+end

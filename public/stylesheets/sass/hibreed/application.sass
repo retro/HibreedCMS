@@ -1,0 +1,63 @@
+@import "reset"
+@import "mixins/border_radius"
+
+body
+  background: #2c2d31
+  color: white
+  font-family: Helvetica, Arial, sans-serif
+  
+#menu-wrapper
+  position: absolute
+  top: 0
+  bottom: 0
+  left: 0
+  width: 170px
+  border-right: 1px solid black
+  background:
+    image: url(/images/hibreed/backgrounds/menu.png)
+    repeat: repeat-y
+    color: #3d3f47
+  
+#content-wrapper
+  position: absolute
+  top: 0
+  bottom: 0
+  right: 0
+  left: 171px
+  border-left: 1px solid #62646a
+#content
+  position: absolute
+  top: 50px
+  left: 10px
+  right: 10px
+  bottom: 10px
+  -moz-box-shadow: 0px 0px 10px #131416
+  -webkit-box-shadow: 0px 0px 10px #131416
+  box-shadow: 0px 0px 10px #131416
+  
+#top-menu
+  +border_radius("5px")
+  position: absolute
+  top: 11px
+  left: 10px
+  right: 10px
+  height: 29px
+  background:
+    image: url(/images/hibreed/backgrounds/top_menu.png)
+    repeat: repeat-x
+
+#copyright
+  position: absolute
+  bottom: 1px
+  left: 0px
+  right: 0px
+  height: 20px
+  line-height: 20px
+  font:
+    size: 10px
+    weight: bold
+  color: #141417
+  text:
+    align: center
+    shadow: 0px 1px #777a88
+  

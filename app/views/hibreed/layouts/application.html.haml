@@ -1,0 +1,17 @@
+!!!
+%html
+  %head
+    %title HibreedRewrite
+    = stylesheet_link_tag 'hibreed/application'
+    = javascript_include_tag :defaults
+    = csrf_meta_tag
+  %body
+    %p.notice= notice
+    %p.alert= alert
+    #menu-wrapper
+      =image_tag('hibreed/logo.png')
+      #copyright HibreedCMS &copy; 2010
+    #content-wrapper
+      #top-menu
+      #content
+        =yield
