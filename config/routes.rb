@@ -56,9 +56,13 @@ HibreedRewrite::Application.routes.draw do
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id(.:format)))'
   
-
-  constraints(HibreedSubdomain) do
-    root :to => "hibreed/dashboard#index"
+  scope :module => 'hibreed' do
+    constraints(HibreedSubdomain) do
+      root :to => "dashboard#index"
+      namespace :control_panel do
+        resources :snippets
+      end
+    end
   end
   
   

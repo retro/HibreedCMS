@@ -3,8 +3,12 @@ steal.plugins('jquery/controller','jquery/controller/subscribe',
 			  'jquery/model/store',
 			  'jquery/model',
 			  'jquery/dom/fixture',
-			  'jquery/dom/form_params')
+			  'jquery/dom/form_params',
+			  'ss/router')
      .resources()
      .models()
-     .controllers()
+     .controllers('main', 'main_menu')
      .views()
+     .then(function($){
+       Router.add('/snippets').to('project_title')
+     })

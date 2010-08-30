@@ -14,6 +14,7 @@ describe Account do
   it { should validate_presence_of(:subdomain) }
   it { should validate_presence_of(:name) }
   it { should validate_uniqueness_of(:subdomain)}
+  it { should reference_many(:snippets)}
   
   describe "User association" do
     

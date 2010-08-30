@@ -51,7 +51,11 @@ body {
   border-right: 1px solid black;
   background-image: url(/images/hibreed/backgrounds/menu.png);
   background-repeat: repeat-y;
-  background-color: #3d3f47; }
+  background-color: #3d3f47;
+  padding-top: 62px; }
+  #menu-wrapper #logo {
+    position: absolute;
+    top: 0px; }
 
 #content-wrapper {
   position: absolute;
@@ -95,3 +99,72 @@ body {
   color: #141417;
   text-align: center;
   text-shadow: 0px 1px #777a88; }
+
+ul#main_menu {
+  border-bottom: 3px solid #33353c; }
+  ul#main_menu li.button {
+    background-image: url(/images/hibreed/backgrounds/left_menu/group.png);
+    background-repeat: repeat-x;
+    border-top: 1px solid #1f2024;
+    border-bottom: 1px solid #585f64;
+    color: white;
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 20px; }
+    ul#main_menu li.button:hover {
+      background-image: url(/images/hibreed/backgrounds/left_menu/group_hover.png); }
+    ul#main_menu li.button.active {
+      background-image: url(/images/hibreed/backgrounds/left_menu/group_active.png); }
+      ul#main_menu li.button.active ul {
+        display: block; }
+    ul#main_menu li.button.mousedown {
+      background-image: url(/images/hibreed/backgrounds/left_menu/group_mousedown.png); }
+    ul#main_menu li.button ul {
+      display: none;
+      font-size: 12px; }
+      ul#main_menu li.button ul li {
+        background-color: #36383f;
+        background-image: url(/images/hibreed/backgrounds/left_menu/link_shadow.png);
+        border-bottom: 1px solid #4c4e53; }
+        ul#main_menu li.button ul li a {
+          color: #cacdd8;
+          line-height: 16px;
+          padding: 5px 10px 3px 38px; }
+          ul#main_menu li.button ul li a:hover {
+            color: #e1e4f1; }
+        ul#main_menu li.button ul li:hover {
+          background-color: #32343b; }
+        ul#main_menu li.button ul li:first-child {
+          border-top: 1px solid #585f64;
+          background-image: url(/images/hibreed/backgrounds/left_menu/link_shadow_top.png); }
+        ul#main_menu li.button ul li:last-child {
+          border-bottom: none;
+          background-image: url(/images/hibreed/backgrounds/left_menu/link_shadow_bottom.png);
+          background-position: bottom; }
+        ul#main_menu li.button ul li.active {
+          color: #31333b;
+          background-color: #babbbd;
+          background-image: url(/images/hibreed/backgrounds/left_menu/link_active.png);
+          background-position: bottom;
+          background-repeat: repeat-x;
+          font-size: 13px;
+          border-bottom: 1px solid #babbbb; }
+          ul#main_menu li.button ul li.active a {
+            color: #31333b;
+            text-shadow: 0px 1px white; }
+          ul#main_menu li.button ul li.active:last-child {
+            border-bottom: none; }
+    ul#main_menu li.button a {
+      background-repeat: no-repeat;
+      background-position: 14px 5px;
+      color: white;
+      display: block;
+      min-height: 20px;
+      padding: 3px 10px 3px 38px;
+      text-decoration: none;
+      text-shadow: 0px -1px black; }
+      ul#main_menu li.button a#dashboard-link {
+        background-image: url(/images/hibreed/fatcow-hosting-icons-1400/16x16/application_home.png); }
+      ul#main_menu li.button a#content-link {
+        background-image: url(/images/hibreed/fatcow-hosting-icons-1400/16x16/newspaper.png); }

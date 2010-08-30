@@ -1,0 +1,80 @@
+ul#main_menu
+  border-bottom: 3px solid #33353c
+  li.button
+    background:
+      image: url(/images/hibreed/backgrounds/left_menu/group.png)
+      repeat: repeat-x
+    border:
+      top: 1px solid #1f2024
+      bottom: 1px solid #585f64
+    color: white
+    display: block
+    font:
+      size: 14px
+      weight: bold
+    line-height: 20px
+    
+    &:hover
+      background-image: url(/images/hibreed/backgrounds/left_menu/group_hover.png)
+    
+    &.active
+      background-image: url(/images/hibreed/backgrounds/left_menu/group_active.png)
+      ul
+        display: block
+    &.mousedown
+      background-image: url(/images/hibreed/backgrounds/left_menu/group_mousedown.png)
+    ul
+      display: none
+      font-size: 12px
+      li
+        background:
+          color: #36383f
+          image: url(/images/hibreed/backgrounds/left_menu/link_shadow.png)
+        border-bottom: 1px solid #4c4e53
+        
+        
+        a
+          color: #cacdd8
+          line-height: 16px
+          padding: 5px 10px 3px 38px
+          &:hover
+            color: #e1e4f1
+        &:hover
+          background-color: #32343b
+        &:first-child
+          border-top: 1px solid #585f64
+          background-image: url(/images/hibreed/backgrounds/left_menu/link_shadow_top.png)
+        &:last-child
+          border-bottom: none
+          background:
+            image: url(/images/hibreed/backgrounds/left_menu/link_shadow_bottom.png)
+            position: bottom
+        &.active
+          color: #31333b
+          background:
+            color: #babbbd
+            image: url(/images/hibreed/backgrounds/left_menu/link_active.png)
+            position: bottom
+            repeat: repeat-x
+          font-size: 13px
+          border-bottom: 1px solid #babbbb
+          a
+            color: #31333b
+            text-shadow: 0px 1px white
+          &:last-child
+            border-bottom: none
+    a
+      background:
+        repeat: no-repeat
+        position: 14px 5px
+      color: white
+      display: block
+      min-height: 20px
+      padding: 3px 10px 3px 38px
+      text:
+        decoration: none
+        shadow: 0px -1px black     
+      &#dashboard-link
+        background-image: url(/images/hibreed/fatcow-hosting-icons-1400/16x16/application_home.png)
+      &#content-link
+        background-image: url(/images/hibreed/fatcow-hosting-icons-1400/16x16/newspaper.png)

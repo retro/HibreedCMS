@@ -34,6 +34,9 @@ GEM
     bson (1.0.4)
     bson_ext (1.0.4)
     builder (2.1.2)
+    dav4rack (0.1.2)
+      nokogiri (~> 1.4.2)
+      uuidtools (~> 2.1.1)
     devise (1.1.1)
       bcrypt-ruby (~> 2.1.2)
       warden (~> 0.10.7)
@@ -66,7 +69,11 @@ GEM
       mongo (~> 1.0.5)
       tzinfo (~> 0.3.22)
       will_paginate (~> 3.0.pre)
+    mongoid_grid (0.0.4)
+      mime-types
+      mongoid (>= 2.0.0.beta.12)
     mysql2 (0.2.3)
+    nokogiri (1.4.3.1)
     polyglot (0.3.1)
     rack (1.2.1)
     rack-mount (0.6.12)
@@ -111,6 +118,7 @@ GEM
     treetop (1.4.8)
       polyglot (>= 0.3.1)
     tzinfo (0.3.23)
+    uuidtools (2.1.1)
     warden (0.10.7)
       rack (>= 1.0.0)
     will_paginate (3.0.pre2)
@@ -120,12 +128,14 @@ PLATFORMS
 
 DEPENDENCIES
   bson_ext (= 1.0.4)
+  dav4rack
   devise
   erector
   fabrication
   haml (~> 3.0.0.rc.5)
   inherited_resources (= 1.1.2)
   mongoid (~> 2.0.0.beta)
+  mongoid_grid
   mysql2
   rails (= 3.0.0.rc2)
   remarkable_mongoid

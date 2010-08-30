@@ -12,6 +12,9 @@ gem "bson_ext", "1.0.4"
 gem "devise"
 gem 'inherited_resources', '1.1.2'
 gem 'haml', "~>3.0.0.rc.5"
+gem 'dav4rack'
+gem 'mongoid_grid'
+
 
 
 group :test, :development do

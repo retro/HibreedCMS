@@ -10,6 +10,7 @@ class Account
   field :generation, :type => Integer
   
   referenced_in :user
+  references_many :snippets
   
   validates_presence_of :subdomain, :name, :user
   validates_uniqueness_of :subdomain
