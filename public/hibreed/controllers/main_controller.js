@@ -5,7 +5,13 @@ $.Controller.extend("Hibreed.Controllers.MainController",
   },
   {
     ready: function(){
-      
+      var controller = this;
+      $(window).resize(function(){
+        controller.publish('window.resized');
+      })
+    },
+    'list_resource subscribe': function(ev, params){
+      $('#content').hibreed_list_resource(params['resource'], params['_path']);
     },
     '.button mousedown': function(el, ev){
       if($(ev.target).is('.button') || $(ev.target).is('.button > a'))

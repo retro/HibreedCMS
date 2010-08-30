@@ -40,7 +40,8 @@ table {
 body {
   background: #2c2d31;
   color: white;
-  font-family: Helvetica, Arial, sans-serif; }
+  font-family: Helvetica, Arial, sans-serif;
+  overflow: hidden; }
 
 #menu-wrapper {
   position: absolute;
@@ -168,3 +169,88 @@ ul#main_menu {
         background-image: url(/images/hibreed/fatcow-hosting-icons-1400/16x16/application_home.png); }
       ul#main_menu li.button a#content-link {
         background-image: url(/images/hibreed/fatcow-hosting-icons-1400/16x16/newspaper.png); }
+      ul#main_menu li.button a#control-panel-link {
+        background-image: url(/images/hibreed/fatcow-hosting-icons-1400/16x16/cog.png); }
+
+.ui-jqgrid .ui-jqgrid-hbox {
+  background-color: #3a454e;
+  background-image: url(/images/hibreed/backgrounds/table/header.png);
+  background-repeat: repeat-x;
+  background-position: bottom;
+  border-bottom: 3px solid #2a3238;
+  border-top: 1px solid #626b72; }
+.ui-jqgrid table.ui-jqgrid-htable {
+  border-collapse: separate; }
+  .ui-jqgrid table.ui-jqgrid-htable tr.ui-jqgrid-labels th {
+    border-left: 1px solid #2a3328;
+    border-right: 1px solid #626b72;
+    color: #cdd4d9;
+    font-size: 14px;
+    height: 29px;
+    line-height: 33px;
+    text-align: left;
+    text-shadow: 0px -1px black; }
+    .ui-jqgrid table.ui-jqgrid-htable tr.ui-jqgrid-labels th:last-child {
+      border-right: none; }
+    .ui-jqgrid table.ui-jqgrid-htable tr.ui-jqgrid-labels th .ui-jqgrid-sortable {
+      height: 29px;
+      padding: 0px 10px; }
+    .ui-jqgrid table.ui-jqgrid-htable tr.ui-jqgrid-labels th.ui-state-hover {
+      background-color: #dc4a14;
+      background-image: url(/images/hibreed/backgrounds/table/header_hover.png);
+      background-position: bottom;
+      background-repeat: repeat-x;
+      color: white; }
+.ui-jqgrid table.ui-jqgrid-btable {
+  border-collapse: separate; }
+  .ui-jqgrid table.ui-jqgrid-btable tr.jqgrow td {
+    background-color: #cbd1d4;
+    background-image: url(/images/hibreed/backgrounds/table/row.png);
+    background-position: bottom;
+    background-repeat: repeat-x;
+    border-color: #e2e2e2;
+    border-left: 1px solid #a5a9ac;
+    color: #252525;
+    font-weight: bold;
+    font-size: 13px;
+    height: 30px;
+    line-height: 30px;
+    padding: 0px 10px;
+    text-shadow: 0px 1px white; }
+    .ui-jqgrid table.ui-jqgrid-btable tr.jqgrow td.jqgrid-rownum {
+      background-color: #c1c7ca;
+      background-image: url(/images/hibreed/backgrounds/table/rownum.png);
+      color: #575454;
+      font-size: 11px;
+      padding: 0px 3px 0px 2px; }
+  .ui-jqgrid table.ui-jqgrid-btable tr.jqgrow.ui-state-hover td {
+    background-color: #272727;
+    background-image: url(/images/hibreed/backgrounds/table/row_hover.png);
+    border-color: #272727;
+    color: #e6d85f;
+    text-shadow: none; }
+
+.list-resource {
+  background: #e2e2e2;
+  position: absolute;
+  top: 0px;
+  bottom: 31px;
+  left: 0px;
+  right: 0px;
+  overflow: hidden; }
+
+.list-resource-summary {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  height: 30px;
+  border-top: 1px solid #6a6a6a;
+  background-color: #c4c6c7;
+  background-image: url(/images/hibreed/backgrounds/list_resources/summary.png);
+  line-height: 30px;
+  color: #464d53;
+  text-shadow: 0px 1px #eeeeee;
+  padding-left: 10px;
+  font-size: 11px;
+  font-weight: bold; }

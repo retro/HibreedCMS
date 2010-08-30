@@ -3,7 +3,7 @@ module Hibreed::ApplicationHelper
     rendered_menu = ['<ul id="main_menu">']
 
     menu_items.each do |title, link|
-      id = "#{title.underscore}-link"
+      id = "#{title.downcase.gsub(' ', '-')}-link"
       if link.is_a? String or (link.is_a? Array and link.size > 0)
         rendered_menu << %Q(<li class="button">)
         if link.is_a? String
@@ -11,8 +11,8 @@ module Hibreed::ApplicationHelper
         elsif link.is_a? Array
           rendered_menu << %Q(<a  id="#{id}" href="#">#{title}</a>)
           rendered_menu << '<ul class="main-menu-links">'
-            link.each do |title, link|
-              rendered_menu << %Q(<li><a href="#{link}">#{title}</a></li>)
+            link.each do |subtitle, sublink|
+              rendered_menu << %Q(<li><a href="#{sublink}">#{subtitle}</a></li>)
             end
           
           rendered_menu << '</ul>'

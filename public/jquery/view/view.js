@@ -76,6 +76,7 @@ $.View= function(url, data, helpers){
 		renderer;
 	
 	//if there is no suffix, add one
+	
 	if(!suffix){
 		suffix = $.View.ext;
 		url = url+$.View.ext
@@ -91,7 +92,6 @@ $.View= function(url, data, helpers){
 		
 	//get the template engine
 	type = $.View.types[suffix];
-	
 	//get the renderer function
 	var renderer = 
 		$.View.cached[id] ? 		// is it cached?

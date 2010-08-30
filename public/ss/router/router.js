@@ -26,7 +26,7 @@ steal.plugins("jquery",
 
         var key = event_name.replace(/^history(\.*)/, '/');
         //@steal-remove-start
-        //steal.dev.log('History event: ' + key);
+        steal.dev.log('History event: ' + key);
         //@steal-remove-end
 
         var foundRoute = Router.recognize(key);
@@ -38,6 +38,7 @@ steal.plugins("jquery",
         }
         
         SS.Router.currentParams = foundRoute.params;
+        foundRoute.params['_path'] = key;
         OpenAjax.hub.publish(foundRoute.destination, foundRoute.params);
       });
     },

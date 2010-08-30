@@ -3,12 +3,13 @@ steal.plugins('jquery/controller','jquery/controller/subscribe',
 			  'jquery/model/store',
 			  'jquery/model',
 			  'jquery/dom/fixture',
+			  'jquery/dom/dimensions',
 			  'jquery/dom/form_params',
 			  'ss/router')
-     .resources()
+     .resources('jquery.jqGrid-3.7.2/js/jquery.jqGrid.min')
      .models()
-     .controllers('main', 'main_menu')
-     .views()
+     .controllers('main', 'main_menu', 'list_resource')
+     .views('list_resource/index.ejs', 'list_resource/summary.ejs')
      .then(function($){
-       Router.add('/snippets').to('project_title')
+       Router.add('/control_panel/:resource').to('list_resource')
      })

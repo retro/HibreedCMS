@@ -5,7 +5,10 @@ class Hibreed::ApplicationController < ApplicationController
 
   def menu_items
     [
-      ['Dashboard', root_path]
+      ['Dashboard', root_path],
+      ['Control panel', [
+        ['Snippets', control_panel_snippets_path]
+      ]]
     ]
   end
   
