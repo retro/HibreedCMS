@@ -8,9 +8,8 @@ jQuery.Controller.extend('Hibreed.Controllers.ListResource',
 },
 /* @Prototype */
 {
-  setup: function(el, resource, resource_path){
-    this.resource      = resource;
-    this.resource_path = resource_path;
+  setup: function(el, resource_controller){
+    this.resource_controller = resource_controller;
     this._super(el);
   },
   ready: function(){
@@ -21,16 +20,17 @@ jQuery.Controller.extend('Hibreed.Controllers.ListResource',
     return this.element.innerWidth();
   },
   gridHeight: function(){
-    return this.element.innerHeight() - 37;
+    return this.element.innerHeight() - 79;
   },
   loadList: function(){
     var controller = this;
-    this.element.find('.list-resource table#list-resource').jqGrid({
+    this.grid_el = this.element.find('.list-resource table#list-resource');
+    this.grid_el.jqGrid({
       loadComplete: function(data){
         controller.updateSummary(data);
       },
       scroll: 1,
-      url: this.resource_path + '.json',
+      url: this.resource_controller.collection_url() + '.json',
       datatype: 'json',
       mtype: 'GET',
       colNames: ['Name', 'Content', ''],
@@ -54,6 +54,18 @@ jQuery.Controller.extend('Hibreed.Controllers.ListResource',
   },
   updateSummary: function(data){
     this.element.find('.list-resource-summary').html(this.view('list_resource/summary', {data: data}));
+  },
+  '.delete click': function(el, ev){
+    var id = el.parents('tr').attr('id');
+    var controller = this;
+    if(confirm('Are you sure?')){
+      $.post(this.resource_controller.destroy_url(id), {_method: 'delete'}, function(response){
+        var message = JSON.parse(response)['message'];
+        controller.grid_el.jqGrid('delRowData', id);
+        $.jGrowl(message)
+      });
+    }
+    
   },
   'window.resized subscribe': function(){
     this.element.find('.list-resource table#list-resource').setGridWidth(this.gridWidth()).setGridHeight(this.gridHeight());

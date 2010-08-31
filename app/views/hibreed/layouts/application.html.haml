@@ -2,7 +2,7 @@
 %html
   %head
     %title HibreedRewrite
-    = stylesheet_link_tag '/hibreed/resources/jquery.jqGrid-3.7.2/css/ui.jqgrid.css', 'hibreed/application'
+    = stylesheet_link_tag '/hibreed/resources/jquery.jqGrid-3.7.2/css/ui.jqgrid.css', '/hibreed/resources/jGrowl-1.2.4/jquery.jgrowl.css', 'hibreed/application'
     = javascript_include_tag '/steal/steal.js?hibreed,development'
     = csrf_meta_tag
   %body
@@ -14,6 +14,3 @@
       
       #copyright HibreedCMS &copy; 2010
     #content-wrapper
-      #top-menu
-      #content
-        =yield

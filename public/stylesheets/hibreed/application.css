@@ -65,28 +65,26 @@ body {
   right: 0;
   left: 171px;
   border-left: 1px solid #62646a; }
-
-#content {
-  position: absolute;
-  top: 50px;
-  left: 10px;
-  right: 10px;
-  bottom: 10px;
-  -moz-box-shadow: 0px 0px 10px #131416;
-  -webkit-box-shadow: 0px 0px 10px #131416;
-  box-shadow: 0px 0px 10px #131416; }
-
-#top-menu {
-  border-radius: 5px;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  position: absolute;
-  top: 11px;
-  left: 10px;
-  right: 10px;
-  height: 29px;
-  background-image: url(/images/hibreed/backgrounds/top_menu.png);
-  background-repeat: repeat-x; }
+  #content-wrapper .content {
+    position: absolute;
+    top: 50px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    -moz-box-shadow: 0px 0px 10px #131416;
+    -webkit-box-shadow: 0px 0px 10px #131416;
+    box-shadow: 0px 0px 10px #131416; }
+  #content-wrapper .top-menu {
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    position: absolute;
+    top: 11px;
+    left: 10px;
+    right: 10px;
+    height: 29px;
+    background-image: url(/images/hibreed/backgrounds/top_menu.png);
+    background-repeat: repeat-x; }
 
 #copyright {
   position: absolute;
@@ -225,12 +223,12 @@ ul#main_menu {
         color: white; }
 
 .ui-jqgrid .ui-jqgrid-hbox {
-  background-color: #3a454e;
+  background-color: #444444;
   background-image: url(/images/hibreed/backgrounds/table/header.png);
   background-repeat: repeat-x;
   background-position: bottom;
-  border-bottom: 3px solid #2a3238;
-  border-top: 1px solid #626b72; }
+  border-bottom: 3px solid #333333;
+  border-top: 1px solid #666666; }
 .ui-jqgrid table.ui-jqgrid-htable {
   border-collapse: separate; }
   .ui-jqgrid table.ui-jqgrid-htable tr.ui-jqgrid-labels th {
@@ -251,6 +249,8 @@ ul#main_menu {
       background-position: bottom;
       background-repeat: repeat-x;
       color: white; }
+.ui-jqgrid .ui-jqgrid-bdiv {
+  border-top: 1px solid white; }
 .ui-jqgrid table.ui-jqgrid-btable {
   border-collapse: separate; }
   .ui-jqgrid table.ui-jqgrid-btable tr.jqgrow td {
