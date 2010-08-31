@@ -1,0 +1,60 @@
+.black-buttons-big
+  display: inline-block
+  height: 33px
+  white-space: normal
+
+  .button
+    background:
+      image: url(/images/hibreed/backgrounds/black_buttons_big/background.png)
+      position: -20px 0px
+    float: left
+    font:
+      size: 11px
+      weight: bold
+    height: 33px
+    line-height: 33px
+    &:first-child
+      background-position: left
+      a
+        border-left: none
+    &:last-child
+      background: none
+      a
+        border-right: none
+        background:
+          image: url(/images/hibreed/backgrounds/black_buttons_big/background.png)
+          position: right 
+        &:hover
+          background-image: url(/images/hibreed/backgrounds/black_buttons_big/background_hover.png)
+    &:only-child
+      background:
+        image: url(/images/hibreed/backgrounds/black_buttons_big/background.png)
+      padding-left: 10px
+      a
+        padding-left: 0px
+        margin-right: -10px
+    &:hover
+      background-image: url(/images/hibreed/backgrounds/black_buttons_big/background_hover.png)
+      &:last-child
+        background: none
+      &:only-child
+        background-image: url(/images/hibreed/backgrounds/black_buttons_big/background_hover.png)
+    &.mousedown
+      background-image: url(/images/hibreed/backgrounds/black_buttons_big/background_mousedown.png)
+      &:only-child
+        background-image: url(/images/hibreed/backgrounds/black_buttons_big/background_mousedown.png)
+      a:hover
+        background-image: url(/images/hibreed/backgrounds/black_buttons_big/background_mousedown.png)
+      
+    a
+      color: #CCC
+      display: block
+      text:
+        decoration: none
+        shadow: 0px -1px black
+      padding: 0px 10px
+      border:
+        left: 1px solid #2F2F2F
+      &:hover
+        color: white
+      

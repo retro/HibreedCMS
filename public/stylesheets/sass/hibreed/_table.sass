@@ -15,13 +15,12 @@
     border-collapse: separate
     tr.ui-jqgrid-labels
       th
-        border:        
-          left: 1px solid #2a3328
-          right: 1px solid #626b72
+
         color: #cdd4d9
         font-size: 14px
         height: 29px
-        line-height: 33px
+        line-height: 23px
+        padding: 0px 11px
         text:
           align: left
           shadow: 0px -1px black
@@ -29,7 +28,6 @@
           border-right: none
         .ui-jqgrid-sortable
           height: 29px
-          padding: 0px 10px
         &.ui-state-hover
           background:
             color: #dc4a14
@@ -53,9 +51,8 @@
         font:
           weight: bold
           size: 13px
-        height: 30px
-        line-height: 30px
-        padding: 0px 10px
+        line-height: 33px
+        padding: 3px 10px
         text-shadow: 0px 1px white
         &.jqgrid-rownum
           background: 
@@ -63,7 +60,19 @@
             image: url(/images/hibreed/backgrounds/table/rownum.png)
           color: #575454
           font-size: 11px
-          padding: 0px 3px 0px 2px
+          padding: 0px 10px 0px 10px
+        .black-buttons-big
+          position: absolute
+          display: none
+          margin-top: 1px
+          margin-right: 10px
+          right: 0px
+          
+        &.col-before-actions
+          border-right: none
+        &.actions
+          border-left: none
+          
       &.ui-state-hover
         td
           background:
@@ -72,6 +81,8 @@
           border-color: #272727
           color: #e6d85f
           text-shadow: none
+          .black-buttons-big
+            display: block
           
           
         

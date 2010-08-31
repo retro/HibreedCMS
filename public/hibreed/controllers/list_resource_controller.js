@@ -33,10 +33,11 @@ jQuery.Controller.extend('Hibreed.Controllers.ListResource',
       url: this.resource_path + '.json',
       datatype: 'json',
       mtype: 'GET',
-      colNames: ['Name', 'Content'],
+      colNames: ['Name', 'Content', ''],
       colModel:[
-        {name: 'name', index: 'name', width: '50%'},
-        {name: 'content', index: 'content', width: '50%'}
+        {name: 'name', index: 'name', width: 300},
+        {name: 'content', index: 'content', classes: 'col-before-actions'},
+        {name: 'actions', index: '', width: 115, fixed: true, formatter: 'actionsFormatter', sortable: false, classes: 'actions'}
       ],
       gridview: true,
       rowNum: 100,

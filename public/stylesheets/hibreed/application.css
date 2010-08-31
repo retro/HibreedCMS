@@ -172,6 +172,58 @@ ul#main_menu {
       ul#main_menu li.button a#control-panel-link {
         background-image: url(/images/hibreed/fatcow-hosting-icons-1400/16x16/cog.png); }
 
+.black-buttons-big {
+  display: inline-block;
+  height: 33px;
+  white-space: normal; }
+  .black-buttons-big .button {
+    background-image: url(/images/hibreed/backgrounds/black_buttons_big/background.png);
+    background-position: -20px 0px;
+    float: left;
+    font-size: 11px;
+    font-weight: bold;
+    height: 33px;
+    line-height: 33px; }
+    .black-buttons-big .button:first-child {
+      background-position: left; }
+      .black-buttons-big .button:first-child a {
+        border-left: none; }
+    .black-buttons-big .button:last-child {
+      background: none; }
+      .black-buttons-big .button:last-child a {
+        border-right: none;
+        background-image: url(/images/hibreed/backgrounds/black_buttons_big/background.png);
+        background-position: right; }
+        .black-buttons-big .button:last-child a:hover {
+          background-image: url(/images/hibreed/backgrounds/black_buttons_big/background_hover.png); }
+    .black-buttons-big .button:only-child {
+      background-image: url(/images/hibreed/backgrounds/black_buttons_big/background.png);
+      padding-left: 10px; }
+      .black-buttons-big .button:only-child a {
+        padding-left: 0px;
+        margin-right: -10px; }
+    .black-buttons-big .button:hover {
+      background-image: url(/images/hibreed/backgrounds/black_buttons_big/background_hover.png); }
+      .black-buttons-big .button:hover:last-child {
+        background: none; }
+      .black-buttons-big .button:hover:only-child {
+        background-image: url(/images/hibreed/backgrounds/black_buttons_big/background_hover.png); }
+    .black-buttons-big .button.mousedown {
+      background-image: url(/images/hibreed/backgrounds/black_buttons_big/background_mousedown.png); }
+      .black-buttons-big .button.mousedown:only-child {
+        background-image: url(/images/hibreed/backgrounds/black_buttons_big/background_mousedown.png); }
+      .black-buttons-big .button.mousedown a:hover {
+        background-image: url(/images/hibreed/backgrounds/black_buttons_big/background_mousedown.png); }
+    .black-buttons-big .button a {
+      color: #cccccc;
+      display: block;
+      text-decoration: none;
+      text-shadow: 0px -1px black;
+      padding: 0px 10px;
+      border-left: 1px solid #2f2f2f; }
+      .black-buttons-big .button a:hover {
+        color: white; }
+
 .ui-jqgrid .ui-jqgrid-hbox {
   background-color: #3a454e;
   background-image: url(/images/hibreed/backgrounds/table/header.png);
@@ -182,19 +234,17 @@ ul#main_menu {
 .ui-jqgrid table.ui-jqgrid-htable {
   border-collapse: separate; }
   .ui-jqgrid table.ui-jqgrid-htable tr.ui-jqgrid-labels th {
-    border-left: 1px solid #2a3328;
-    border-right: 1px solid #626b72;
     color: #cdd4d9;
     font-size: 14px;
     height: 29px;
-    line-height: 33px;
+    line-height: 23px;
+    padding: 0px 11px;
     text-align: left;
     text-shadow: 0px -1px black; }
     .ui-jqgrid table.ui-jqgrid-htable tr.ui-jqgrid-labels th:last-child {
       border-right: none; }
     .ui-jqgrid table.ui-jqgrid-htable tr.ui-jqgrid-labels th .ui-jqgrid-sortable {
-      height: 29px;
-      padding: 0px 10px; }
+      height: 29px; }
     .ui-jqgrid table.ui-jqgrid-htable tr.ui-jqgrid-labels th.ui-state-hover {
       background-color: #dc4a14;
       background-image: url(/images/hibreed/backgrounds/table/header_hover.png);
@@ -213,22 +263,33 @@ ul#main_menu {
     color: #252525;
     font-weight: bold;
     font-size: 13px;
-    height: 30px;
-    line-height: 30px;
-    padding: 0px 10px;
+    line-height: 33px;
+    padding: 3px 10px;
     text-shadow: 0px 1px white; }
     .ui-jqgrid table.ui-jqgrid-btable tr.jqgrow td.jqgrid-rownum {
       background-color: #c1c7ca;
       background-image: url(/images/hibreed/backgrounds/table/rownum.png);
       color: #575454;
       font-size: 11px;
-      padding: 0px 3px 0px 2px; }
+      padding: 0px 10px 0px 10px; }
+    .ui-jqgrid table.ui-jqgrid-btable tr.jqgrow td .black-buttons-big {
+      position: absolute;
+      display: none;
+      margin-top: 1px;
+      margin-right: 10px;
+      right: 0px; }
+    .ui-jqgrid table.ui-jqgrid-btable tr.jqgrow td.col-before-actions {
+      border-right: none; }
+    .ui-jqgrid table.ui-jqgrid-btable tr.jqgrow td.actions {
+      border-left: none; }
   .ui-jqgrid table.ui-jqgrid-btable tr.jqgrow.ui-state-hover td {
     background-color: #272727;
     background-image: url(/images/hibreed/backgrounds/table/row_hover.png);
     border-color: #272727;
     color: #e6d85f;
     text-shadow: none; }
+    .ui-jqgrid table.ui-jqgrid-btable tr.jqgrow.ui-state-hover td .black-buttons-big {
+      display: block; }
 
 .list-resource {
   background: #e2e2e2;
