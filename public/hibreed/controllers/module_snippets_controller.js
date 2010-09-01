@@ -16,6 +16,12 @@ jQuery.Controller.extend('Hibreed.Controllers.ModuleSnippets',
   index_action: function(){
     this.list = this.element.find('.content').hibreed_list_resource(this);
   },
+  edit_action: function(id){
+    Snippet.find(id, this.callback(['openEditForm']))
+  },
+  openEditForm: function(snippet){
+    this.publish('lightbox.show', 'Test lightbox message')
+  },
   collection_url: function(){
     return this.base_url;
   },

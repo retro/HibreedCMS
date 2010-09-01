@@ -55,8 +55,11 @@ jQuery.Controller.extend('Hibreed.Controllers.ListResource',
   updateSummary: function(data){
     this.element.find('.list-resource-summary').html(this.view('list_resource/summary', {data: data}));
   },
+  getResourceId: function(el){
+    return el.parents('tr').attr('id');
+  },
   '.delete click': function(el, ev){
-    var id = el.parents('tr').attr('id');
+    var id = this.getResourceId(el);
     var controller = this;
     if(confirm('Are you sure?')){
       $.post(this.resource_controller.destroy_url(id), {_method: 'delete'}, function(response){
@@ -65,7 +68,10 @@ jQuery.Controller.extend('Hibreed.Controllers.ListResource',
         $.jGrowl(message)
       });
     }
-    
+  },
+  '.edit click': function(el, ev){
+    var id = this.getResourceId(el);
+    this.resource_controller.edit_action(id);
   },
   'window.resized subscribe': function(){
     this.element.find('.list-resource table#list-resource').setGridWidth(this.gridWidth()).setGridHeight(this.gridHeight());
